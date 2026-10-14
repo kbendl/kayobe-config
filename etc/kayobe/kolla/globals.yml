@@ -1,2 +1,6 @@
 ---
 # Add extra Kolla global configuration here.
+
+# Reduce the control plane's memory footprint by limiting the number of worker
+# processes to one per-service.
+openstack_service_workers: "1"

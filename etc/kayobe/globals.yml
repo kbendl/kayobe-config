@@ -92,6 +92,10 @@
 # Default is "default".
 #network_engine: default
 
+
+selinux_do_reboot: false
+
+
 ###############################################################################
 # Dummy variable to allow Ansible to accept this file.
 workaround_ansible_issue_8743: yes

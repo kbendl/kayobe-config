@@ -15,6 +15,13 @@
 # Further information on the available network attributes is provided in the
 # network configuration reference in the Kayobe documentation.
 
+# Controller interface on all-in-one network.
+aio_interface: br0
+
+# Interface dummy0 is plugged into the all-in-one network bridge.
+aio_bridge_ports:
+  - dummy0
+
 ###############################################################################
 # Dummy variable to allow Ansible to accept this file.
 workaround_ansible_issue_8743: yes

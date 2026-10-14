@@ -5,7 +5,7 @@
 # Network role to network mappings.
 
 # Name of the network used for admin access to the overcloud
-#admin_oc_net_name:
+admin_oc_net_name: aio
 
 # Name of the network used by the seed to manage the bare metal overcloud
 # hosts via their out-of-band management controllers.
@@ -24,26 +24,27 @@
 #provision_wl_net_name:
 
 # Name of the network used to expose the internal OpenStack API endpoints.
-#internal_net_name:
+internal_net_name: aio
 
 # List of names of networks used to provide external network access via
 # Neutron.
 # Deprecated name: external_net_name
 # If external_net_name is defined, external_net_names will default to a list
 # containing one item, external_net_name.
-#external_net_names:
+external_net_names: 
+  - aio
 
 # Name of the network used to expose the public OpenStack API endpoints.
-#public_net_name:
+public_net_name: aio
 
 # Name of the network used by Neutron to carry tenant overlay network traffic.
-#tunnel_net_name:
+tunnel_net_name: aio
 
 # Name of the network used to carry storage data traffic.
-#storage_net_name:
+storage_net_name: aio
 
 # Name of the network used to carry storage management traffic.
-#storage_mgmt_net_name:
+storage_mgmt_net_name: aio
 
 # Name of the network used to carry swift storage data traffic.
 #swift_storage_net_name:
@@ -67,6 +68,11 @@
 # define the global attributes of networks. The following example shows a basic
 # configuration for a network called "example":
 #
+# All-in-one network.
+
+aio_cidr: 192.168.33.0/24
+aio_vip_address: 192.168.33.223
+
 # example_cidr: 10.0.0.0/24
 # example_allocation_pool_start: 10.0.0.2
 # example_allocation_pool_end: 10.0.0.254
